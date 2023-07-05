@@ -1,0 +1,50 @@
+<p>user works!</p>
+<h2>Hello {{ name }}</h2>
+
+<hr />
+
+<h2>String Interpolation</h2>
+<p>Hello {{ name }}, Your Id is {{ Id }}</p>
+
+<hr />
+
+<h2>Property Binding</h2>
+<button class="btn btn-primary" [disabled]="!isnewuserAllowed">
+  Add New User
+</button>
+
+<hr />
+
+<h2>Event Binding</h2>
+<button
+  class="btn btn-primary"
+  [disabled]="!isnewuserAllowed"
+  (click)="getCreatedStatus()"
+>
+  Add User
+</button>
+<p>User Created Status : {{ isUserCreated }}</p>
+
+<hr />
+<h2>using $event</h2>
+<div class="row">
+  <div class="col-md-4">
+    <input type="text" class="form-control" (input)="updateData($event)" />
+  </div>
+
+  {{ userName }}
+</div>
+
+<hr />
+<h2>Two Way Data Binding</h2>
+<div class="row">
+  <div class="col-md-4">
+    <input type="text" class="form-control" [(ngModel)]="twowayData" />
+  </div>
+  <div>{{twowayData}}</div>
+</div>
+
+
+<hr/>
+
+<app-directives></app-directives>
