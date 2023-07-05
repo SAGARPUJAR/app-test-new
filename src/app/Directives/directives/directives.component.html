@@ -1,15 +1,23 @@
-
 <h2>Directives *ngIf</h2>
 <button class="btn btn-primary" (click)="createUser()">Add</button>
 <div *ngIf="isUserCreated">Hello User</div>
 
-<hr/>
+<hr />
 
 <h2>Directives *ngIf and Else</h2>
 
 <button class="btn btn-primary" (click)="createUser()">Add</button>
-<div *ngIf="isUserCreated else noUser">Hello User is Created Successfully.</div>
+<div *ngIf="isUserCreated; else noUser">
+  Hello User is Created Successfully.
+</div>
 
 <ng-template #noUser>
-    <p>No User is Available, Please click to create the User</p>
+  <p>No User is Available, Please click to create the User</p>
 </ng-template>
+
+<hr />
+<app-attribute-directives></app-attribute-directives>
+<app-attribute-directives></app-attribute-directives>
+<app-attribute-directives></app-attribute-directives>
+<app-attribute-directives></app-attribute-directives>
+<app-attribute-directives></app-attribute-directives>

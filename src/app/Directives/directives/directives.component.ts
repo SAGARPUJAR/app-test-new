@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
 })
 export class DirectivesComponent {
   isUserCreated: boolean = false;
+  isUserActive: string = '';
+  userId: number = 10;
+
+  constructor() {
+    this.isUserActive = Math.random() > 0.5 ? 'online' : 'offiline';
+  }
 
   createUser() {
     this.isUserCreated = true;
+  }
+
+  getUserStatus(){
+    return this.isUserActive;
   }
 }
